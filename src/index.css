@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: FoundersGrotesk-Regular;
+  src: url("/src/Assets/Founders_Grotesk/FoundersGrotesk-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: New-Spirit-Medium;
+  src: url("/src/Assets/fonts/fonnts.com-New-Spirit-Medium.otf") format("otf");
+}
+
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
+  --font-FGR: "FoundersGrotesk-Regular", sans-serif; 
+  --font-NSM: "New-Spirit-Medium", serif; 
+  --color-primary: #EDE7DB;
+  --color-secondary:#1C1B19;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box
+}
+
+.window-mask{
+  /* mask: line url('./Assets/Rectangle.svg') center/cover no-repeat; */
+  mask-image: linear-gradient(#000,#000), url('/src/Assets/Rectangle.svg');
+  mask-composite: exclude;
+  mask-size:auto, 100px auto;
+  mask-position: 50% 55%;
+  mask-repeat: no-repeat;
+
+}
