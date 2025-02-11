@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+
 
 const Header = () => {
   const elementH1 = useRef(null);
@@ -9,11 +10,11 @@ const Header = () => {
   const yMove = useTransform(scrollYProgress, [0, 0.3], ["0%", "-100vh"]); // Moves down
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1,0]); // Moves down
   const move = useTransform(scrollYProgress, [0, 0.15], ["0%", "-2vh"]); // Moves down
-  const scaleDown = useTransform(scrollYProgress, [0, .2], ["120%", "100%"]); // Moves down
+  const scaleDown = useTransform(scrollYProgress, [0, .3], ["140%", "110%"]); // Moves down
 
   return (
     <div className=" relative bg-primary h-auto overflow-clip">
-      <motion.h1 style={{ y: yMove}} className="absolute z-50 text-[140px] text-center w-full text-secondary font-FGR font-extrabold uppercase flex justify-center items-center gap-2 leading-none tracking-tight">
+      <motion.h1 style={{ y: yMove}} className="absolute z-50 text-[130px] text-center w-full text-secondary font-FGR font-extrabold uppercase flex justify-center items-center gap-2 leading-none tracking-tight">
         Sons <span className="text-6xl font-bold">&</span> daughters
       </motion.h1>
 
@@ -29,13 +30,8 @@ const Header = () => {
       </div>
 
       <div className="mt-[-200vh] h-[200vh]">
-        <motion.img style={{scale:scaleDown}} className="w-full h-screen sticky top-0 object-cover" src="https://images.pexels.com/photos/8629876/pexels-photo-8629876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  alt="image"/>
-      </div>
-
-      <div className="h-screen w-screen">
-        <img className="w-full h-full object-cover" src="https://images.pexels.com/photos/19144225/pexels-photo-19144225/free-photo-of-abandoned-house-in-countryside-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-      </div>
-      
+        <motion.img style={{scale:scaleDown}} className="w-screen h-screen sticky top-0 object-cover" src="https://images.pexels.com/photos/8629876/pexels-photo-8629876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  alt="image"/>
+      </div>      
     </div>
   );
 };
