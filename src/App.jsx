@@ -1,3 +1,4 @@
+import Generation from "./components/Generation";
 import Header from "./components/Header";
 import ImageGallery from "./components/ImageGallery";
 import Loader from "./components/Loader";
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <Section1/>
       <ImageGallery/>
+      <Generation/>
     </div>
   );
 }
